@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JIHO — Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Noto+Sans+KR:wght@400;500&display=swap">
+  <script src="config.js" defer></script>
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="#/">JIHO</a>
+  <nav id="nav" aria-label="Navigation"></nav>
+  <div id="languages" class="controls"></div>
+</header>
+<main id="page"></main>
+<footer id="footer"></footer>
+
+<dialog id="viewer" aria-labelledby="viewer-title">
+  <div class="viewer-top">
+    <h2 id="viewer-title"></h2>
+    <div class="controls">
+      <button id="zoom" type="button"></button>
+      <button id="close-viewer" type="button"></button>
+    </div>
+  </div>
+  <div class="viewport" id="viewport"><img id="preview" alt="" draggable="false"></div>
+</dialog>
+
+<dialog id="login" aria-labelledby="login-title">
+  <form id="login-form" class="editor">
+    <h2 id="login-title"></h2>
+    <label>Email<input type="email" name="email" autocomplete="username" required></label>
+    <label>Password<input type="password" name="password" autocomplete="current-password" required></label>
+    <div class="controls">
+      <button id="sign-in" type="submit"></button>
+      <button id="close-login" type="button"></button>
+    </div>
+    <p id="login-status" role="status"></p>
+  </form>
+</dialog>
+</body>
+</html>
